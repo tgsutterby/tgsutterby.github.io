@@ -9,11 +9,11 @@
          content must come *after* these tags -->
     <title>Number Guessing Game</title>
         <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
-    <link href="css/mystyles.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-theme.min.css" rel="stylesheet">
+    <link href="font-awesome.min.css" rel="stylesheet">
+    <link href="bootstrap-social.css" rel="stylesheet">
+    <link href="mystyles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,17 +37,37 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li class="active"><a href="#">Number Game</a></li>
-                    <li><a href="#">Green Screen</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="NGG.html">Number Game</a></li>
+                    <li><a href="#">More Coming Soon...</a></li>
                 </ul>
                 </div>
             </div>
     </nav>
     
+     <header class="jumbotron">    
+        <div class="mycontainer">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-8">
+                    <h1>Timothy Sutterby</h1>
+                    <p style="padding:10px;"></p>
+                    <p>This JavaScript game was created as part of the JavaScript course: Generating Random Numbers, part of the Full-Stack Web Development specialization through Hong Kong University. Click the Play Game button below to play. </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div>
+        <div class="centeringdiv">
+            <button class="button" onclick="play_game()">Play Game</button>
+        </div>
+    </div>
+    
     <script src="myjs_guessing_game.js"></script>
     
-    <button onclick="play_game()"></button>
     
     </body>
 </html>
+    
