@@ -1,10 +1,11 @@
-var target;
-var text_input;
-var guess;
-var finished = false;
-var guesses = 0;
+
 
 function play_game() {
+    var target;
+    var text_input;
+    var guess;
+    var finished = false;
+    var guesses = 0;
     var random_number = Math.random() * 100;
     var random_number_integer = Math.floor(random_number);
     target = random_number_integer + 1;
