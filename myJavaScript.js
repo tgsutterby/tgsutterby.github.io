@@ -10,7 +10,7 @@ function play_game() {
     target = random_number_integer + 1;
     
     while (!finished) {
-        text_input = prompt("I am thinking of a number in the range of 1 to 100.\n\n" +                            "What is the number?");
+        text_input = prompt("I am thinking of a number in the range of 1 to 100.\n\n" + "What is the number?");
         guess = parseInt(text_input);
         guesses += 1;
         finished = check_guess();
