@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+		
+	<head>
+		<title>Dating Website</title>
+		
+		<style>
+		
+		fieldset {
+			background:lightyellow;
+			border:10px solid yellow;
+			margin-bottom:10px;
+			width:800px;
+		}
+		label {
+			width:180px;
+			margin-bottom:10px;
+			display:inline-block;
+			text-align:top;
+			text-align:right;
+		}
+		option {
+			width:auto;
+		}
+		radio {
+			width:auto;
+		}
+		textarea {
+			width:360px;
+			height:50px;
+		}
+		span {
+			display:inline-block;
+			width:60px;
+			height:20px;
+			text-align:center;
+		}
+		#red {
+			background-color:red;
+		}
+		#purple {
+			background-color:purple;
+		}
+		label:hover { 
+            font-size:25px;
+            transition-duration: .4s;
+            display:inline-block;
+        }
+		input:hover { 
+            font-size:30px;
+            transition-duration: .4s;
+            display:inline-block;
+        }
+        img {
+            display:block;
+            margin:auto;
+            max-height: 200px;
+        }
+
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+	
+		<form action="https://../" method="post" enctype="multipart/form-data">
+			
+			<fieldset>	
+				<legend>Your Face</legend>
+			<br>	
+				<Label for="yourimage">Your Image:</label>
+					<input type="file" id="yourimage" name="yourimage" required><br>
+				<label for="preview">Image Preview:</label>
+					<img id="preview" class="imagestyles"><br>
+			<br>		
+			</fieldset>
+			
+			<fieldset>
+				<legend>Your General Details</legend>
+			<br>
+				<label for="name">Name:</label>
+					<input type="text" id="name" name="name" placeholder="Your full name" required><br>
+				<label for="gender">Gender:</label>
+					<input type="radio" name="gender" id="gender" value="male" checked> Male
+					<input type="radio" name="gender" id="gender" value="female"> Female<br>
+				<label for="age">Age:</label>
+					<input type="number" id="age" name="age" size="10" value="18" min="18" max="99" required><br>
+				<label for="dateofbirth">Date of birth:</label>
+					<input type="date" id="dateofbirth" name="dateofbirth"><br>
+				<label for="favoritecolor">Favorite Color:</label>
+					<input type="color" id="favoritecolor" name="favoritecolor"><br>
+				<label for="whichcountry">Which country:</label>
+					<select name="whichcountry" id="whichcountry">
+						<option value="No selection">No selection</option>
+						<option value="USA">USA</option>
+						<option value="Germany">Germany</option>
+						<option value="Africa">Africa</option>
+						<option value="China">China</option>
+						<option value="Australia">Australia</option>
+					</select><br>
+			<br>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Your Indicators</legend>
+			<br>
+				<label for="height">Height:</label>
+					<span id="red">Short</span> <input type="range" min="0" max="100" name="height" id="height" name="height"> <span id="purple">Tall</span><br>
+				<label for="salary">Salary:</label>
+					<span id="red">Poor</span> <input type="range" min="0" max="100" name="salary" id="salary"> <span id="purple"> Rich </span><br>
+			<br>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Your Contact Information</legend><br>
+				<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required><br>
+				<label for="mobile">Mobile:</label>
+					<input type="tel" id="mobile" name="mobile"><br>
+				<label for="address">Address:</label>
+					<textarea id="address" name="address"></textarea><br>
+				<label for="contact">Method to contact you:</label>
+					<input type="checkbox" name="contact" id="contact" value="Email"> Email
+                	<input type="checkbox" name="contact" id="contact" value="Whatsapp"> Whatsapp
+                    <input type="checkbox" name="contact" id="contact" value="In-app chat"> In-app chat<br>
+			<br>
+			</fieldset><br>
+			
+			<input type="submit" name="submit" value="Submit">
+			
+		</form>
+		
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	
+	</body>
+</html>
