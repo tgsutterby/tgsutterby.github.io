@@ -11,10 +11,16 @@
     <title>Tim I Am</title>
 
 <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-social.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="css/bootstrap-social.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
-        <script src="js/jquery-3.1.1.min.js"></script>
+        
+        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+        <!-- <link href="css/bootstrap-social.min.css" rel="stylesheet"> -->
+        <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+        <!-- <script src="js/jquery-3.1.1.min.js"></script> -->
         
     
         <style>
@@ -52,6 +58,33 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutme.html">About</a></li>
         <li class="active"><a href="myprojects.html">Projects</a></li> 
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="navbar-text">Change the page colors:</li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Background <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Choose a color</li>
+            <li><a href="#" id="Rback">Red</a></li>
+            <li><a href="#" id="Bback">Blue</a></li>
+            <li><a href="#" id="Gback">Green</a></li>
+            <li><a href="#" id="Yback">Yellow</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#" id="RESETback">Reset</a></li>
+          </ul>
+        </li>
+            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Text Color <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Choose a color</li>
+            <li><a href="#" id="Rtext">Red</a></li>
+            <li><a href="#" id="Ytext">Yellow</a></li>
+            <li><a href="#" id="Gtext">Green</a></li>
+            <li><a href="#" id="Btext">Black</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#" id="RESETtext">Reset</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -97,7 +130,7 @@
     </body>
 
 <script type="text/javascript">
-        $.getJSON("https://freegeoip.net/json/", function(data) {
+        $.getJSON("http://freegeoip.net/json/", function(data) {
             var region_code = data.region_code;
             var region_name = data.region_name;
             var city = data.city;
@@ -119,6 +152,50 @@
             document.getElementById("STout").innerHTML= region_code;
             document.getElementById("ZIPout").innerHTML= zip_code;
             document.getElementById("MCout").innerHTML= metro_code;
+        });
+    
+        $("#Rback").on("click", function() {
+            $("body").css("background-image", "none");
+            $("body").css("background-color", "red");
+        });
+        
+        $("#Bback").on("click", function() {
+            $("body").css("background-image", "none");
+            $("body").css("background-color", "blue");
+        });
+        
+        $("#Gback").on("click", function() {
+            $("body").css("background-image", "none");
+            $("body").css("background-color", "green");
+        });
+        
+        $("#Yback").on("click", function() {
+            $("body").css("background-image", "none");
+            $("body").css("background-color", "yellow");
+        });
+        
+        $("#RESETback").on("click", function() {
+            $("body").css("background-image", "url('m2FZL4L.jpg')");
+        });
+        
+        $('#Rtext').on("click", function() {
+            $("body").css("color", "red");
+        });
+        
+        $('#Ytext').on("click", function() {
+            $("body").css("color", "yellow");
+        });
+        
+        $('#Gtext').on("click", function() {
+            $("body").css("color", "green");
+        });
+        
+        $('#Btext').on("click", function() {
+            $("body").css("color", "black");
+        });
+        
+        $('#RESETtext').on("click", function() {
+            $("body").css("color", "whitesmoke");
         });
     </script>
 
