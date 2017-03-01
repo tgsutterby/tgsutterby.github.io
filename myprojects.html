@@ -14,6 +14,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-social.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/jquery-3.1.1.min.js"></script>
         
     
         <style>
@@ -25,9 +26,11 @@
             .myBoxShadows {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.26), 0 17px 50px 0 rgba(0,0,0,0.21);}
             .projectBtn {display: inline-block; height: 300px; width: 350px; background-color:          whitesmoke; color: black;}
             .myWell {color: black; text-align: left;}
+            .dlWell {display: inline-block; vertical-align: top;}
             .myFieldset {border:2px solid whitesmoke;}
             .totheright {display: block; float: right; font-style: italic;}
             footer {text-align: center;}
+            output {}
             
         </style>
 </head>
@@ -58,6 +61,31 @@
         <div class="container">
             <h2>My Projects</h2>
             <br>
+        <div class="well myWell"><h4>Your IP address info:</h4><p>This is my attempt to gather information about the viewers IP address, and display it in HTML output elements.</p><p><div class="panel-body">
+                        <div class="dlWell">
+                        <dl class="dl-horizontal dlWell">
+                            <dt>IPv6 address:</dt>
+                            <dd><output id="IPout"></output></dd>
+                            <dt>Country:</dt>
+                            <dd><output id="CYout"></output></dd>
+                            <dt>Time zone:</dt>
+                            <dd><output id="TZout"></output></dd>
+                            <dt>Latitude:</dt>
+                            <dd><output id="LATout"></output></dd>
+                            <dt>Longitude:</dt>
+                            <dd><output id="LONGout"></output></dd>
+                       </dl>
+                        <dl class="dl-horizontal dlWell">
+                            <dt>City:</dt>
+                            <dd><output id="CITYout"></output></dd>
+                            <dt>State:</dt>
+                            <dd><output id="STout"></output></dd>
+                            <dt>Zip Code:</dt>
+                            <dd><output id="ZIPout"></output></dd>
+                            <dt>Google Metro Code:</dt>
+                            <dd><output id="MCout"></output></dd>
+                        </dl>
+                    </div></div></p></div>
         <div class="well myWell"><h4>Dating Website</h4><p>The dating website was an assignment given to us during the HTML, CSS, and JavaScript course of the Java Programming specialization,</p><p>through Duke University.<span class="totheright"><a href="Part3.html" target="_blank">View the project</a></span></p></div>
         <div class="well myWell"><h4>Number guessing game</h4><p>The number guessing game was created during the HTML, CSS, and JavaScript course of the Full-Stack Web Development specialization,</p><p>through Hong Kong University.<span class="totheright"><a href="numbergame.html" target="_blank">Play the game</a></span></p></div>
         <div class="well myWell"><h4>Color guessing game</h4><p>The color guessing game was also created during the HTML, CSS, and JavaScript course of the Full-Stack Web Development specialization,</p><p>through Hong Kong University.<span class="totheright"><a href="colorgamepart2.html" target="_blank">Play the game</a></span></p></div>
@@ -67,5 +95,31 @@
         <footer class="nav navbar-fixed-bottom">&copy; T G Sutterby</footer>
     
     </body>
+
+<script type="text/javascript">
+        $.getJSON("http://freegeoip.net/json/", function(data) {
+            var region_code = data.region_code;
+            var region_name = data.region_name;
+            var city = data.city;
+            var zip_code = data.zip_code;
+            var country_code = data.country_code;
+            var country = data.country_name;
+            var ip = data.ip;
+            var time_zone = data.time_zone;
+            var latitude = data.latitude;
+            var longitude = data.longitude;
+            var metro_code = data.metro_code;
+            
+            document.getElementById("IPout").innerHTML= ip;
+            document.getElementById("CYout").innerHTML= country;
+            document.getElementById("TZout").innerHTML= time_zone;
+            document.getElementById("LATout").innerHTML= latitude;
+            document.getElementById("LONGout").innerHTML= longitude;
+            document.getElementById("CITYout").innerHTML= city;
+            document.getElementById("STout").innerHTML= region_code;
+            document.getElementById("ZIPout").innerHTML= zip_code;
+            document.getElementById("MCout").innerHTML= metro_code;
+        });
+    </script>
 
 </html>
