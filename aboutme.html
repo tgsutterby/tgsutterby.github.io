@@ -1,177 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Tim I Am</title>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="css/bootstrap-social.css" rel="stylesheet">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-    
-        <style>
-            
-            body {background-image: url('m2FZL4L.jpg'); background-attachment: fixed; color: whitesmoke;}
-            .myBoxShadows {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.26), 0 17px 50px 0 rgba(0,0,0,0.21);}
-            .containerDiv {text-align: center; margin-top: 50px;}
-            .myWell {color: black; text-align: left;}
-            .totheright {display: block; float: right; font-style: italic;}
-            .lcHeight {margin-top: 20%; margin-bottom: 20%;}
-            footer {text-align: center; margin-top: 10%}
-            
-        </style>
-</head>
-    
-    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('m2FZL4L.jpg');
+            background-attachment: fixed;
+            color: whitesmoke;
+        }
         
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        .myModal {
+            background-color: gray;
+            color: whitesmoke;
+        }
+        
+        object {
+            height: 750px;
+        }
+        
+        .myBoxShadows {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.26), 0 17px 50px 0 rgba(0, 0, 0, 0.21);
+        }
+        
+        .containerDiv {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .myWell {
+            color: black;
+            text-align: left;
+        }
+        
+        .totheright {
+            display: block;
+            float: right;
+            font-style: italic;
+        }
+        
+        .lcHeight {
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 10%
+        }
+        
+        hr {
+            border-color: gray;
+        }
+        
+        .secondDiv {
+            margin-top: 5%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Modals -->
+
+    <div id="JHU1Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header myModal">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body myModal">
+
+                    <object data="DataScientistToolboxJHU.pdf#view=Fit" type="application/pdf" width="100%" height="850">
+                        <p>It appears your Web browser is not configured to display PDF files. No worries, just <a href="DataScientistToolboxJHU.pdf">click here to download the PDF file.</a></p>
+                    </object>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="DU1Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header myModal">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body myModal">
+
+                    <object data="HTML,%20CSS,%20JavaScript%20-%20DU.pdf#view=Fit" type="application/pdf" width="100%" height="850">
+                        <p>It appears your Web browser is not configured to display PDF files. No worries, just <a href="HTML,%20CSS,%20JavaScript%20-%20DU.pdf">click here to download the PDF file.</a></p>
+                    </object>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="HKU1Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header myModal">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body myModal">
+
+                    <object data="HTML,%20CSS,%20JavaScript%20-%20HKU.pdf#view=Fit" type="application/pdf" width="100%" height="850">
+                        <p>It appears your Web browser is not configured to display PDF files. No worries, just <a href="HTML,%20CSS,%20JavaScript%20-%20HKU.pdf">click here to download the PDF file.</a></p>
+                    </object>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="HKU2Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header myModal">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body myModal">
+
+                    <object data="FrontendwebUI-HKU.pdf#view=Fit" type="application/pdf" width="100%" height="850">
+                        <p>It appears your Web browser is not configured to display PDF files. No worries, just <a href="FrontendwebUI-HKU.pdf">click here to download the PDF file.</a></p>
+                    </object>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modals -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar myCenterDiv"></span>
         <span class="icon-bar myCenterDiv"></span>
         <span class="icon-bar myCenterDiv"></span> 
       </button>
-      <a class="navbar-brand" href="index.html">T G Sutterby</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="aboutme.html">About</a></li>
-        <li><a href="myprojects.html">Projects</a></li> 
-      </ul>
-        <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-text">Change the page colors:</li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Background <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-header">Choose a color</li>
-            <li><a href="#" id="Rback">Red</a></li>
-            <li><a href="#" id="Bback">Blue</a></li>
-            <li><a href="#" id="Gback">Green</a></li>
-            <li><a href="#" id="Yback">Yellow</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#" id="RESETback">Reset</a></li>
-          </ul>
-        </li>
-            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Text Color <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-header">Choose a color</li>
-            <li><a href="#" id="Rtext">Red</a></li>
-            <li><a href="#" id="Ytext">Yellow</a></li>
-            <li><a href="#" id="Gtext">Green</a></li>
-            <li><a href="#" id="Btext">Black</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#" id="RESETtext">Reset</a></li>
-          </ul>
-        </li>
-        <li><a href="#" id="RESETall">Reset All</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-        
-        
-        <div class="container containerDiv">
+                <a class="navbar-brand" href="index.html">T G Sutterby</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="aboutme.html">About</a></li>
+                    <li><a href="myprojects.html">Projects</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-text">Change the page colors:</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Background <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Choose a color</li>
+                            <li><a href="#" id="Rback">Red</a></li>
+                            <li><a href="#" id="Bback">Blue</a></li>
+                            <li><a href="#" id="Gback">Green</a></li>
+                            <li><a href="#" id="Yback">Yellow</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" id="RESETback">Reset</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Text Color <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Choose a color</li>
+                            <li><a href="#" id="Rtext">Red</a></li>
+                            <li><a href="#" id="Ytext">Yellow</a></li>
+                            <li><a href="#" id="Gtext">Green</a></li>
+                            <li><a href="#" id="Btext">Black</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" id="RESETtext">Reset</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="RESETall">Reset All</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container containerDiv">
         <div class="container-fluid">
-        <div class="container col-sm-6 col-xs-12">
-            <h2 style="color: white;">About</h2>
-            <p><h3>I am currently available for, and seeking, work as a front-end web designer and developer. Former employers have described me as punctual, focused, and success-driven.</h3></p>
-            <div class="lcHeight">
-                
-                <h2>Let's Connect</h2>
-                <br><br>
-                <div class="containerDiv">
-                    <a class="btn btn-social-icon btn-google" style="background-color: red; color: white;" href="https://plus.google.com/u/0/+TimothySutterby" target="_blank"><span class="fa fa-google"></span></a>
+            <div class="container col-sm-6 col-xs-12">
+                <h2 style="color: white;">About</h2>
+                <p>
+                    <h3>I am currently available for, and seeking, work as a front-end web designer and developer. Former employers have described me as punctual, focused, and success-driven.</h3>
+                </p>
+                <div class="lcHeight">
+
+                    <h2>Let's Connect</h2>
+                    <br><br>
+                    <div class="containerDiv">
+                        <a class="btn btn-social-icon btn-google" style="background-color: red; color: white;" href="https://plus.google.com/u/0/+TimothySutterby" target="_blank"><span class="fa fa-google"></span></a>
                         <a class="btn btn-social-icon btn-facebook" style="background-color: blue; color: white;" href="https://www.facebook.com/scorpi0wonder" target="_blank"><span class="fa fa-facebook"></span></a>
                         <a class="btn btn-social-icon btn-linkedin" style="background-color: blue; color: white;" href="https://www.linkedin.com/in/timothy-sutterby-b70b1543/" target="_blank"><i class="fa fa-linkedin"></i></a>
                         <a class="btn btn-social-icon btn-twitter" style="background-color: lightblue; color: white;" href="https://twitter.com/tgsutterby"><i class="fa fa-twitter" target="_blank"></i></a>
                         <a class="btn btn-social-icon" style="background-color: gray; color: white;" href="mailto:timsutterby@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                    <br><br><br>
+                    <div><a class="btn btn-social-icon"><i class="fa fa-mobile" style="background-color: gray; color: white;"></i></a><span style="font-size: 25px; vertical-align: middle;"> (816) 786-8764</span></div>
+
+
                 </div>
-                <br><br><br>
-                <div><a class="btn btn-social-icon"><i class="fa fa-mobile" style="background-color: gray; color: white;"></i></a><span style="font-size: 25px; vertical-align: middle;"> (816) 786-8764</span></div>
-                
-                
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <h2 style="color: white;">Training</h2>
+                <div class="well myWell">
+                    <h3>Data Science Specialization</h3>
+                    <p><h4>Johns Hopkins University</h4></p>
+                    <hr>
+                    <p>The Data Scientist’s Toolbox<br><i>Certificate, Completed March 5, 2016</i><span class="totheright"><a href="#" id="JHU1Link" type="Button">View Certificate</a></span></p>
+                </div>
+                <div class="well myWell">
+                    <h3>Java Programming Specialization</h3>
+                    <p><h4>Duke University</h4></p>
+                    <hr>
+                    <p>Programming Foundations with JavaScript, HTML and CSS<br><i>Certificate, Completed November 13, 2016</i><span class="totheright"><a href="#" id="DU1Link" type="Button">View Certificate</a></span></p>
+                </div>
+                <div class="well myWell">
+                    <h3>Full-Stack Web Development Specialization</h3>
+                    <p><h4>Hong Kong University of Science and Technology</h4></p>
+                    <hr>
+                    <p>HTML, CSS and JavaScript<br><i>Certificate, Completed February     16, 2017</i><span class="totheright"><a href="#" id="HKU1Link" type="Button">View Certificate</a></span></p>
+                    <p>Front-End Web UI Frameworks and Tools<br><i>Certificate, Completed March 22, 2017</i><span class="totheright"><a href="#" id="HKU2Link" type="Button">View Certificate</a></span></p>
+                </div>
             </div>
         </div>
-        <div class="col-sm-6 col-xs-12">
-            <h2 style="color: white;">Training</h2>
-        <div class="well myWell"><h4>The Data Scientist’s Toolbox
-            </h4><p><i>Johns Hopkins University</i></p><p><i>Certificate, Completed March 5, 2016</i><span class="totheright"><a href="DataScientistToolboxJHU.pdf" target="_blank">View Certificate</a></span></p></div>
-        <div class="well myWell"><h4>Programming Foundations with JavaScript, HTML and CSS</h4><p>     <i>Duke University</i></p><p><i>Certificate, Completed November 13, 2016</i><span class="totheright"><a href="HTML,%20CSS,%20JavaScript%20-%20DU.pdf" target="_blank">View Certificate</a></span></p></div>
-        <div class="well myWell"><h4>Programming Foundations with JavaScript, HTML and CSS</h4><p>     <i>Hong Kong University of Science and Technology</i></p><p><i>Certificate, Completed February     16, 2017</i><span class="totheright"><a href="HTML,%20CSS,%20JavaScript%20-%20HKU.pdf" target="_blank">View Certificate</a></span></p>
-        </div>
-            <div class="well myWell"><h4>Java Programming</h4><p><i>Duke University</i></p><p><i>Certificate, Estimated Completion by April 30, 2017</i></p>
-        </div>
-            <div class="well myWell"><h4>Full-Stack Web Development</h4><p><i>Hong Kong University of Science and Technology</i></p><p><i>Certificate, Estimated Completion by April 30, 2017</i></p>
-        </div>
-        </div>
-        </div>            
-        </div>
-        
-   <footer class="nav">&copy; T G Sutterby</footer>
+    </div>
     
-    
-    </body>
+    <div class="secondDiv">
+                <button class="button btn-primary btn-lg" type="button" id="projectsBtn">Continue</button>
+            </div>
 
-    <script type="text/javascript">
-        $("#Rback").on("click", function() {
-            $("body").css("background-image", "none");
-            $("body").css("background-color", "red");
-        });
-        
-        $("#Bback").on("click", function() {
-            $("body").css("background-image", "none");
-            $("body").css("background-color", "blue");
-        });
-        
-        $("#Gback").on("click", function() {
-            $("body").css("background-image", "none");
-            $("body").css("background-color", "green");
-        });
-        
-        $("#Yback").on("click", function() {
-            $("body").css("background-image", "none");
-            $("body").css("background-color", "yellow");
-        });
-        
-        $("#RESETback").on("click", function() {
-            $("body").css("background-image", "url('m2FZL4L.jpg')");
-        });
-        
-        $('#Rtext').on("click", function() {
-            $("body").css("color", "red");
-        });
-        
-        $('#Ytext').on("click", function() {
-            $("body").css("color", "yellow");
-        });
-        
-        $('#Gtext').on("click", function() {
-            $("body").css("color", "green");
-        });
-        
-        $('#Btext').on("click", function() {
-            $("body").css("color", "black");
-        });
-        
-        $('#RESETtext').on("click", function() {
-            $("body").css("color", "whitesmoke");
-        });
-        
-        $("#RESETall").on("click", function() {
-            $("body").css("background-image", "url('m2FZL4L.jpg')");
-            $("body").css("color", "whitesmoke");
-        })
-    </script>
+    <footer class="nav">&copy; T G Sutterby</footer>
+
+
+</body>
+
+<script type="text/javascript">
+    document.getElementById('projectsBtn').onclick = function() {
+        location.href = "myprojects.html";
+    }
     
+    $("#Rback").on("click", function() {
+        $("body").css("background-image", "none");
+        $("body").css("background-color", "red");
+    });
+
+    $("#Bback").on("click", function() {
+        $("body").css("background-image", "none");
+        $("body").css("background-color", "blue");
+    });
+
+    $("#Gback").on("click", function() {
+        $("body").css("background-image", "none");
+        $("body").css("background-color", "green");
+    });
+
+    $("#Yback").on("click", function() {
+        $("body").css("background-image", "none");
+        $("body").css("background-color", "yellow");
+    });
+
+    $("#RESETback").on("click", function() {
+        $("body").css("background-image", "url('m2FZL4L.jpg')");
+    });
+
+    $('#Rtext').on("click", function() {
+        $("body").css("color", "red");
+    });
+
+    $('#Ytext').on("click", function() {
+        $("body").css("color", "yellow");
+    });
+
+    $('#Gtext').on("click", function() {
+        $("body").css("color", "green");
+    });
+
+    $('#Btext').on("click", function() {
+        $("body").css("color", "black");
+    });
+
+    $('#RESETtext').on("click", function() {
+        $("body").css("color", "whitesmoke");
+    });
+
+    $("#RESETall").on("click", function() {
+        $("body").css("background-image", "url('m2FZL4L.jpg')");
+        $("body").css("color", "whitesmoke");
+    })
+
+    $("#JHU1Link").click(function() {
+        $("#JHU1Modal").modal('show');
+    });
+    
+    $("#DU1Link").click(function() {
+        $("#DU1Modal").modal('show');
+    });
+    
+    $("#HKU1Link").click(function() {
+        $("#HKU1Modal").modal('show');
+    });
+    
+    $("#HKU2Link").click(function() {
+        $("#HKU2Modal").modal('show');
+    });
+
+</script>
+
 
 </html>
